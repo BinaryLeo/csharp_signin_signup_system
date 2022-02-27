@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+		<add key="MyConnection" value="Server=localhost;Port=5432;Database=Testes;User Id = postgres; Password=08061972" />
+	</appSettings>
+</configuration>
