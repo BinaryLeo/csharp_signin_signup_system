@@ -363,4 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #Remove app.config (Connection string)
-App.config
+*.config
