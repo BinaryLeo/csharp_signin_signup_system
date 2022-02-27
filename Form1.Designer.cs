@@ -145,7 +145,6 @@
             this.checkboxShowPass.Name = "checkboxShowPass";
             this.checkboxShowPass.Size = new System.Drawing.Size(119, 21);
             this.checkboxShowPass.TabIndex = 3;
-            this.checkboxShowPass.TabStop = false;
             this.checkboxShowPass.Text = "Show Password";
             this.checkboxShowPass.UseVisualStyleBackColor = true;
             // 
@@ -168,13 +167,14 @@
             // 
             this.clearButton.BackColor = System.Drawing.Color.White;
             this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.Enabled = false;
             this.clearButton.FlatAppearance.BorderSize = 2;
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.clearButton.Location = new System.Drawing.Point(33, 436);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(218, 28);
-            this.clearButton.TabIndex = 5;
+            this.clearButton.TabIndex = 4;
             this.clearButton.Text = "CLEAR";
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.button1_Click);
