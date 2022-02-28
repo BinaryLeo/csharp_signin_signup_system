@@ -16,8 +16,6 @@ namespace Login_and_Register_System
         public frmRegister()
         {
             InitializeComponent();
-
-
         }
      
         NpgsqlConnection conn = new  NpgsqlConnection(ConfigurationManager.AppSettings.Get("MyConnection"));
@@ -30,7 +28,10 @@ namespace Login_and_Register_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtComPassword.Text = "";
+            txtUsername.Focus();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace Login_and_Register_System
 
         private void registrationButton_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
+             if(txtUsername.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
             {
                 MessageBox.Show("Username and Password fields are empty", "Sign Up Failed", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
@@ -54,12 +55,46 @@ namespace Login_and_Register_System
                     cmd = new NpgsqlCommand( register, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtComPassword.Text = "";
+                    MessageBox.Show("Your account has been Successfully Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+            else
+            {
+                MessageBox.Show("Passwords does not match, Please Re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtComPassword.Text = "";
+                txtPassword.Text = "";
+                txtPassword.Focus();
+
+            }
+        }
+
+        private void checkboxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+         if (checkboxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+                txtComPassword.PasswordChar = '\0';
+
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+                txtComPassword.PasswordChar = '*';
+            }
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+           
+            new LoginForm().Show();
+            this.Hide();
         }
     }
 }
