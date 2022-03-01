@@ -16,12 +16,6 @@ Login and Register System using C# for Windows Forms
 
 <div align="center"><img src="https://user-images.githubusercontent.com/72607039/156090075-28dbf5fc-0420-4992-bab8-b6e49125e1de.gif" width=50% height=50%></div>
 
-
-![system](https://user-images.githubusercontent.com/72607039/156092525-4d081ef4-b314-4517-a298-a3a2fb6813bb.png)
-
-
-
-
 ## 🧪 technologies
 
 This project was built using the following technologies and features:
@@ -63,6 +57,8 @@ create TABLE IF NOT EXISTS csharp_user(
 ``` sql
 INSERT into csharp_user(username,password) values('admin', 'admin') 
 ```
+
+![system](https://user-images.githubusercontent.com/72607039/156093419-6378d936-b20a-409e-8b63-ffe97b781f3f.png)
 
 ## 📄 License
 
