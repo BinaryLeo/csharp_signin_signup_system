@@ -28,7 +28,7 @@ This project was built using the following technologies and features:
 ## 💡 how to use
 
 - Clone the repository.
-- open the project from Visual Studio 2022.
+- Open the project from Visual Studio 2022.
 - Rename the file from <code>APP_config.xml</code> to <code>app.config</code> and in the below code section type your database credentials.
 
 
@@ -39,7 +39,8 @@ This project was built using the following technologies and features:
 </code>
                                                                                                
 
-- Database structure
+- Database structure.
+
 For this application, we are using A local PostgreSQL Database. 
  
   Table name : csharp_user
