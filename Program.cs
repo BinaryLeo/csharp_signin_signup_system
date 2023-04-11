@@ -16,7 +16,7 @@ namespace Login_and_Register_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegister());
+            Application.Run(new LoginForm());
         }
     }
 }

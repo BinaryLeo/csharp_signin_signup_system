@@ -4,7 +4,7 @@
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
     </startup>
 	<appSettings>
-		<add key="MyConnection" value="insert here your connection string and rename this file" />
+		<add key="MyConnection" value="Server=localhost;Port=5432;Database=yourDataBase;User Id=postgres;Password=yourPassword;" />
 	</appSettings>
   <runtime>
     <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">

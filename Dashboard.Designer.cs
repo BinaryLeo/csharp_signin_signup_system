@@ -105,6 +105,7 @@
             this.label2.Size = new System.Drawing.Size(157, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Some user information";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Dashboard
             // 

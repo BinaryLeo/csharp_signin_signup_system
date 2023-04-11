@@ -17,8 +17,8 @@ namespace Login_and_Register_System
         {
             InitializeComponent();
         }
-     
-        NpgsqlConnection conn = new  NpgsqlConnection(ConfigurationManager.AppSettings.Get("MyConnection"));
+
+        NpgsqlConnection conn = new NpgsqlConnection(ConfigurationManager.AppSettings.Get("MyConnection"));
         NpgsqlCommand cmd = new NpgsqlCommand();
         NpgsqlDataAdapter da = new NpgsqlDataAdapter();
         private void Form1_Load(object sender, EventArgs e)
@@ -41,18 +41,18 @@ namespace Login_and_Register_System
 
         private void registrationButton_Click(object sender, EventArgs e)
         {
-             if(txtUsername.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
+            if (txtUsername.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
             {
-                MessageBox.Show("Username and Password fields are empty", "Sign Up Failed", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Username and Password fields are empty", "Sign Up Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(txtPassword.Text == txtComPassword.Text)
+            else if (txtPassword.Text == txtComPassword.Text)
             {
                 try
                 {
-                 conn.Open();
+                    conn.Open();
                     MessageBox.Show("Connection opened");
-                    string register = "INSERT INTO csharp_user (username,password) VALUES ('" + txtUsername.Text+"','"+txtPassword.Text+"')";
-                    cmd = new NpgsqlCommand( register, conn);
+                    string register = "INSERT INTO csharp_user (username,password) VALUES ('" + txtUsername.Text + "','" + txtPassword.Text + "')";
+                    cmd = new NpgsqlCommand(register, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     txtUsername.Text = "";
@@ -77,7 +77,7 @@ namespace Login_and_Register_System
 
         private void checkboxShowPass_CheckedChanged(object sender, EventArgs e)
         {
-         if (checkboxShowPass.Checked)
+            if (checkboxShowPass.Checked)
             {
                 txtPassword.PasswordChar = '\0';
                 txtComPassword.PasswordChar = '\0';
@@ -92,7 +92,7 @@ namespace Login_and_Register_System
 
         private void label6_Click_1(object sender, EventArgs e)
         {
-           
+
             new LoginForm().Show();
             this.Hide();
         }

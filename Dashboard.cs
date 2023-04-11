@@ -25,5 +25,10 @@ namespace Login_and_Register_System
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

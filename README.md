@@ -32,11 +32,11 @@ This project was built using the following technologies and features:
 - Rename the file from <code>APP_config.xml</code> to <code>app.config</code> and in the below code section type your database credentials.
 
 
-<code>
-  &ltappSettings&gt
-		&ltadd key="MyConnection" value=Server=" ";Port=" ";Database=" ";User Id = " "; Password=" " &gt
- &lt/appSettings&gt
-</code>
+```bash
+<appSettings>
+		<add key="MyConnection" value="Server=localhost;Port=5432;Database=yourDataBase;User Id=postgres;Password=yourPassword;" />
+	</appSettings>
+```
                                                                                                
 
 - Database structure.
