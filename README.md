@@ -11,6 +11,8 @@ Login and Register System using C# for Windows Forms
   [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/BinaryLeo/Login-and-Register-System/blob/main/LICENSE)
   ![GitHub last commit](https://img.shields.io/github/last-commit/BinaryLeo/Login-and-Register-System?style=flat-square)
   ![GitHub top language](https://img.shields.io/github/languages/top/BinaryLeo/Login-and-Register-System?style=flat-square)
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-Functional-green)
+
 
 </div>
 
